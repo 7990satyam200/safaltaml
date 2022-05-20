@@ -1,0 +1,66 @@
+site_name: Safalta ML/recommendation Doc
+repo_url: https://github.com/FrancescoSaverioZuppichini/Modern-Python-Doc-Example
+edit_uri: edit/main/docs
+site_author: Francesco Zuppichini
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+  features:
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+nav:
+  - Docs: index.md
+  - Getting Started: getting_started.md
+  - CourseRecommendations: CourseRecommendations.md
+  - CourseRecommendationsBlog: CourseRecommendationsBlog.md
+
+  - MockTestRecommendations: MockTestRecommendations.md
+
+  - CI/CD: ci_cd.md
+  - Code Reference: reference/
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: SUMMARY.md
+
+
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+extra_css:
+  - css/termynal.css
+
+extra_javascript:
+  - javascript/termynal.js
+  - javascript/custom.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
